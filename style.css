@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*背景部分*/
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+/* 左側のメインスペース */
+.site-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/*ヘッダー*/
+.site-header {
+  grid-column: 1 / 2;
+  border-bottom: 2px solid #555;
+  padding: 20px;
+}
+
+/*サイドバー*/
+.sidebar {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  background-color: #333333;
+  border-left: 2px solid #555;
+  padding: 20px;
+}
