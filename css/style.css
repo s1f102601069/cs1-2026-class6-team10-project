@@ -48,6 +48,7 @@ body {
   height: 2000px; 
 }
 
+/*ヘッダーのボタン*/
 .header-button {
   background-color: #ffffff;
   padding: 5px;
@@ -55,4 +56,36 @@ body {
   border-radius: 5px;
   text-decoration: none;
   color: black;
+}
+
+/*画面を左右に二分割*/
+.split-area {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+/*ジャンル選択のボタン*/
+.genre-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: antiquewhite;
+  color: #121417;
+  padding: 10px;
+
+}
+
+.genre-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
