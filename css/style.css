@@ -57,11 +57,18 @@ body {
 /*ヘッダーのボタン*/
 .header-button {
   background-color: #ffffff;
+  font-size: 30px;
   padding: 5px;
   margin: 3px;
   border-radius: 5px;
+  text-align: center;
   text-decoration: none;
-  color: #1a1a1a94;
+  color: #000;
+  width: 200px;
+  height: 60px;
+  &:hover {
+    background-color: #cccccc;
+  }
 }
 
 /*画面を左右に二分割*/
@@ -87,7 +94,9 @@ body {
   background-color: rgba(250, 235, 215, 0.932);
   color: #121417;
   padding: 10px;
-
+  &:hover {
+    background-color: #e5c9b5;
+  }
 }
 
 .genre-list {
@@ -96,15 +105,19 @@ body {
   gap: 10px
 }
 
+/*サイドバーのボタン*/
 .sidebar-list {
   display: block;
   text-decoration: none;
   text-align: center;
   color: black;
-  background-color: antiquewhite;
+  background-color: #faebd7;
   padding: 3px;
   margin: 3px;
   gap: 3px;
+  &:hover {
+    background-color: #e5c9b5;
+  }
 }
   
 .detail-image-box {
@@ -206,4 +219,25 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
   border-color: #58a6ff;
+}
+
+/*目次部分*/
+.contents {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.contents a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: #faebd7;
+  padding: 3px;
+  margin: 3px;
+  gap: 3px;
+
+  &:hover {
+    background-color: #e5c9b5;
+  }
 }
