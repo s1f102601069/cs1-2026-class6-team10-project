@@ -61,7 +61,7 @@ body {
   margin: 3px;
   border-radius: 5px;
   text-decoration: none;
-  color: black;
+  color: #1a1a1a94;
 }
 
 /*画面を左右に二分割*/
@@ -84,7 +84,7 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  background-color: antiquewhite;
+  background-color: rgba(250, 235, 215, 0.932);
   color: #121417;
   padding: 10px;
 
@@ -169,7 +169,7 @@ body {
 /*メイン画面のレビュー表示*/
 .review-card {
   display: block;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   background-color: #1e222b;
   border: 1px solid #30363d;
