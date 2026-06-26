@@ -3,6 +3,7 @@ const reviewsData = [
     id: "gameA",
     title: "『ゲームA』レビュー",
     date: "2026年6月",
+    image: "game_review_site_images/87306.jpg",
     category: "RPG",
     content: "ここにゲームAの詳しい評価や、グラフィック、システムについての詳細な文章"
   },
@@ -23,3 +24,5 @@ const reviewsData = [
     content: "　「Xenoblade Definitive Edition」は、2010年にWii向けのゲームタイトルとして発売された「Xenoblade」のリメイク版として、2020年にNintendo Switch向けタイトルとして発売された。\nリメイク前と比べてUIやグラフィックが改善されたことで、より遊びやすく、Xenobladeの世界をよりきれいな映像で楽しめるようになった。"
   }
 ];
+
+/*記事を書くときは一番上の書き方を参考にしてください！*/
