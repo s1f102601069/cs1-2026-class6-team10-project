@@ -22,9 +22,12 @@
           ジャンル: <span id="review-category" style="background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">-</span>
         </p>
         
-        <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px;">
-        
-        <div id="review-content" style="font-size: 16px; line-height: 1.8; color: #e0e0e0; letter-spacing: 0.05em;">
+      <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px;">
+
+      <div id="review-image-container" class="detail-image-box"></div>
+
+      <div id="review-content" style="font-size: 16px; line-height: 1.8; color: #e0e0e0; letter-spacing: 0.05em;">
+          
         </div>
       </article>
 
@@ -50,6 +53,10 @@
       document.getElementById('review-category').textContent = currentReview.category;
       document.getElementById('review-content').innerHTML = currentReview.content.replace(/\n/g, '<br>'); 
       document.title = currentReview.title;
+      const imageContainer = document.getElementById('review-image-container');
+    if (imageContainer) {
+      imageContainer.innerHTML = `<img src="${currentReview.image}" alt="${currentReview.title}">`;
+      }
     } else {
       document.getElementById('review-title').textContent = "レビューが見つかりませんでした";
       document.getElementById('review-content').textContent = "URLを確認するか、トップページからアクセスし直してください。";
