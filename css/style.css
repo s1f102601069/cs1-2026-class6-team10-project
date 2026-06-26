@@ -89,3 +89,16 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
+
+.sidebar-list {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: antiquewhite;
+  padding: 3px;
+  margin: 3px;
+  gap: 3px;
+  
+  
+}
