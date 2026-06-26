@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!sidebar) return;
 
-  fetch("/sidebar.html")
+  fetch("sidebar.html")
     .then(res => res.text())
     .then(html => {
       sidebar.innerHTML = html;
