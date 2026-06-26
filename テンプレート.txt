@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site-container">
+        <header class="site-header">
+            <div id="header"></div>
+        </header>
+        <script src="js/include_header.js"></script>
+
+
+        <main class="main-content">
+
+
+
+        </main>
+
+
+        <aside class="sidebar">
+            <div id="sidebar"></div>
+        </aside>
+        <script src="js/include.js"></script>
+
+    </div>
+</body>
+
+</html>
