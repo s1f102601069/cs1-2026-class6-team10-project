@@ -23,7 +23,7 @@
 
     <main class="main-content">
       <section id="AttractingAttention">
-        <h1>現在の最も注目されているゲーム</h1>
+        <h1>＜REVIEW＞</h1>
         <div class="card-grid" id="card-container"></div>
       </section>
     
@@ -63,27 +63,57 @@
   </div>
 
   <script src="reviews-data.js"></script>
+
   <script>
-    const container = document.getElementById('card-container');
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('card-container');
+      const searchForm = document.querySelector('.search-form');
+      const searchInput = document.querySelector('.search-input');
 
-    if (container && typeof reviewsData !== 'undefined') {
-      const shuffledReviews = [...reviewsData].sort(() => 0.5 - Math.random());
-      const pickupReviews = shuffledReviews.slice(0, 5);
+      if (!container || typeof reviewsData === 'undefined') return;
 
-      pickupReviews.forEach(review => {
-        const cardHtml = `
-          <a href="review.html?id=${review.id}" class="review-card">
-            <div class="card-image">
-              <img src="${review.image}" alt="${review.title}">
-            </div>
-            <div class="card-title">
-              ${review.title}
-            </div>
-          </a>
-        `;
-        container.insertAdjacentHTML('beforeend', cardHtml);
+      function displayReviews(filteredReviews) {
+        container.innerHTML = ''; 
+
+        if (filteredReviews.length === 0) {
+          container.innerHTML = '<p style="color: #ccc; padding: 20px;">一致するレビューが見つかりませんでした。</p>';
+          return;
+        }
+
+        filteredReviews.forEach(review => {
+          const cardHtml = `
+            <a href="review.html?id=${review.id}" class="review-card">
+              <div class="card-image">
+                <img src="${review.image}" alt="${review.title}">
+              </div>
+              <div class="card-title">
+                ${review.title}
+              </div>
+            </a>
+          `;
+          container.insertAdjacentHTML('beforeend', cardHtml);
+        });
+      }
+
+      const defaultReviews = [...reviewsData].sort(() => 0.5 - Math.random()).slice(0, 5);
+      displayReviews(defaultReviews);
+
+      searchForm.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        
+        const keyword = searchInput.value.trim().toLowerCase(); 
+
+        if (keyword === '') {
+          displayReviews(defaultReviews);
+          return;
+        }
+        const matchedReviews = reviewsData.filter(review => {
+          return review.title.toLowerCase().includes(keyword);
+        });
+
+        displayReviews(matchedReviews);
       });
-    }
+    });
   </script>
   
 </body>
